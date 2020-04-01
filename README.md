@@ -2,7 +2,7 @@
 The MATLAB code for enhancing the contrast of gray-scale images using nature-inspired methods can be found in this repo. The nature inspired methods are ant colony optimization, genetic algorithm, and simulated annealing, which generate a global transfer function to convert input images to higher contrast ones, while trying to keep the natural look of the images.
 
 ## Description
-The details of the image enhancer method are published in our papers: (DSP: [pdf](docs/2013-DSP.pdf) or [ScienceDirect](https://doi.org/10.1016/j.dsp.2012.12.011) and (CEC: [pdf](docs/2010-CEC.pdf) or [IEEE Xplore](https://doi.org/10.1109/CEC.2010.5586542)).
+The details of the image enhancer method are published in our papers: DSP ([pdf](docs/2013-DSP.pdf) or [ScienceDirect](https://doi.org/10.1016/j.dsp.2012.12.011)) and CEC ([pdf](docs/2010-CEC.pdf) or [IEEE Xplore](https://doi.org/10.1109/CEC.2010.5586542)).
 
 The method works by placing a few artificial agents (aka artificial ants) in a search space to generate a transfer function useful for converting any image to a higher contrast one. The ants start from the origin of the transfer function (bottom left) and move to the top right point of that.  Any ant probabilistically chooses among its available movement options, which are shown below:
 <p align="center">
@@ -14,7 +14,7 @@ After reaching the last point, a transfer function is created and its fitness is
   <img src="./docs/pheromone.jpg" alt="Pheromone deposits of artificial ants" height=200/>
 </p>
 
-Each artificial ant has a genetic code during the process. The population of ants evolvs via genetic algorithm. This changes the characteristics of each ants and their preferences in traversing their path in the search space. After selecting the best transfer functions, the simulated annealing tries to fine tune them in an artificial annealing process. This is the flowchart of the general steps in the method:
+Each artificial ant has a genetic code during the process. The population of ants evolvs via genetic algorithm. This changes the characteristics of the ants and their preferences in traversing their path in the search space. After selecting the best transfer functions, the simulated annealing tries to fine-tune them in an artificial annealing process. This is the flowchart of the general steps in the method:
 <p align="center">
   <img src="./docs/flowchart.jpg" alt="Flowchart" height=350/>
 </p>
@@ -28,7 +28,7 @@ After this process is finished, the best transfer function is selected and is us
 </p>
 
 ## The Code
-The MATLAB code in the file *imenhance.m*, under the *im-enhance* folder, contains the function to perform the image contrast enhancement. The function takes the input image and two optional arguments, one for the number of iterations and the other for disabling the simulated annealing to increase speed and probably at some performance cost.
+The MATLAB code in the file *imenhance.m*, under the *im-enhance* folder, contains the function to perform the image contrast enhancement. The function takes the input image and two optional arguments, one for the number of iterations and the other for disabling the simulated annealing if preferred to increase speed and probably at some performance cost.
 
 # Citation
 To refer to this work, you may cite our papers published at [Elsevier Digital Signal Processing](https://doi.org/10.1016/j.dsp.2012.12.011) and [IEEE Congress on Evolutionary Computation](https://doi.org/10.1109/CEC.2010.5586542):
