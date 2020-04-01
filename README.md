@@ -21,10 +21,10 @@ Each artificial ant has a genetic code during the process. The population of ant
 
 After this process is finished, the best transfer function is selected and is used to convert the input image. Check these samples out:
 <p align="center">
-  <img src="./docs/example1.jpg" alt="Example 1" height=350/>
+  <img src="./docs/example1.jpg" alt="Example 1" height=200/>
 </p>
 <p align="center">
-  <img src="./docs/example2.jpg" alt="Example 2" height=350/>
+  <img src="./docs/example2.jpg" alt="Example 2" height=200/>
 </p>
 
 ## The Code
