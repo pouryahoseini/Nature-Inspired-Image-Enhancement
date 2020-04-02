@@ -568,61 +568,61 @@ end
                             new_lut(active_point-1)=optimization_lut(active_point)+1;
                             new_lut(active_point)=optimization_lut(active_point)+1;
                             new_pheromone_trace(1:256,active_point)=0;  %clean ant's previous way
-                            new_pheromone_trace(256-new_lut(active_point),active_point)=1;  %write ant's new way
+                            new_pheromone_trace(double(256-new_lut(active_point)),active_point)=1;  %write ant's new way
                             if active_point~=max_input_intensity
-                                new_pheromone_trace(257-new_lut(active_point),active_point+1)=0;  %clean ant's previous way
+                                new_pheromone_trace(double(257-new_lut(active_point)),active_point+1)=0;  %clean ant's previous way
                             end
-                            new_pheromone_trace(256-new_lut(active_point):256-optimization_lut(active_point-1),active_point-1)=1;  %write ant's new way                            
+                            new_pheromone_trace(double(256-new_lut(active_point)):double(256-optimization_lut(active_point-1)),active_point-1)=1;  %write ant's new way                            
                         elseif suggested_direction==2
                             new_lut(active_point)=optimization_lut(active_point)+1;
-                            new_pheromone_trace(256-new_lut(active_point),active_point)=1;  %write ant's new way
+                            new_pheromone_trace(double(256-new_lut(active_point)),active_point)=1;  %write ant's new way
                             if active_point~=max_input_intensity
-                                new_pheromone_trace(257-new_lut(active_point),active_point+1)=0;  %clean ant's previous way
+                                new_pheromone_trace(double(257-new_lut(active_point)),active_point+1)=0;  %clean ant's previous way
                             end
                         elseif suggested_direction==3
                             new_lut(active_point+1)=optimization_lut(active_point)+1;
                             new_active_point=active_point+1;
-                            new_pheromone_trace(256-optimization_lut(new_active_point):255-new_lut(new_active_point),new_active_point)=0;   %clean ant's previous way
+                            new_pheromone_trace(double(256-optimization_lut(new_active_point)):double(255-new_lut(new_active_point)),new_active_point)=0;   %clean ant's previous way
                             if new_active_point~=max_input_intensity
-                                new_pheromone_trace(256-optimization_lut(new_active_point+1):256-new_lut(new_active_point),new_active_point+1)=1;  %write ant's new way
+                                new_pheromone_trace(double(256-optimization_lut(new_active_point+1)):double(256-new_lut(new_active_point)),new_active_point+1)=1;  %write ant's new way
                             end
-                            new_pheromone_trace(256-new_lut(new_active_point),new_active_point)=1;  %write ant's new way
+                            new_pheromone_trace(double(256-new_lut(new_active_point)),new_active_point)=1;  %write ant's new way
                         elseif suggested_direction==4
                             new_lut(active_point-1)=optimization_lut(active_point);
                             new_active_point=active_point-1;
-                            new_pheromone_trace(256-new_lut(new_active_point):256-optimization_lut(new_active_point),new_active_point)=1;  %write ant's new way
-                            new_pheromone_trace(257-new_lut(new_active_point):256,active_point)=0;  %clean ant's previous way
+                            new_pheromone_trace(double(256-new_lut(new_active_point)):256-optimization_lut(new_active_point),new_active_point)=1;  %write ant's new way
+                            new_pheromone_trace(double(257-new_lut(new_active_point)):256,active_point)=0;  %clean ant's previous way
                         elseif suggested_direction==6
                             new_lut(active_point+1)=optimization_lut(active_point);
                             new_active_point=active_point+1;
                             new_pheromone_trace(1:256,new_active_point)=0;   %clean ant's previous way
                             if new_active_point~=max_input_intensity
-                                new_pheromone_trace(256-optimization_lut(new_active_point+1):256-new_lut(new_active_point),new_active_point+1)=1;  %write ant's new way
+                                new_pheromone_trace(double(256-optimization_lut(new_active_point+1)):double(256-new_lut(new_active_point)),new_active_point+1)=1;  %write ant's new way
                             end
-                            new_pheromone_trace(256-new_lut(new_active_point),new_active_point)=1;  %write ant's new way
+                            new_pheromone_trace(double(256-new_lut(new_active_point)),new_active_point)=1;  %write ant's new way
                         elseif suggested_direction==7
                             new_lut(active_point-1)=optimization_lut(active_point)-1;
                             new_active_point=active_point-1;
-                            new_pheromone_trace(256-new_lut(new_active_point):256-optimization_lut(new_active_point),new_active_point)=1;  %write ant's new way
-                            new_pheromone_trace(257-new_lut(new_active_point):256,active_point)=0;  %clean ant's previous way
-                            new_pheromone_trace(255-new_lut(new_active_point),new_active_point)=0;  %clean ant's previous way
+                            new_pheromone_trace(double(256-new_lut(new_active_point)):256-optimization_lut(new_active_point),new_active_point)=1;  %write ant's new way
+                            new_pheromone_trace(double(257-new_lut(new_active_point)):256,active_point)=0;  %clean ant's previous way
+                            new_pheromone_trace(double(255-new_lut(new_active_point)),new_active_point)=0;  %clean ant's previous way
                         elseif suggested_direction==8
                             new_lut(active_point)=optimization_lut(active_point)-1;
-                            new_pheromone_trace(256-new_lut(active_point),active_point)=1;  %write ant's new way
+                            new_pheromone_trace(double(256-new_lut(active_point)),active_point)=1;  %write ant's new way
                             if active_point~=max_input_intensity
-                                new_pheromone_trace(255-new_lut(active_point),active_point+1)=1;  %write ant's new way
+                                new_pheromone_trace(double(255-new_lut(active_point)),active_point+1)=1;  %write ant's new way
                             end
-                            new_pheromone_trace(255-new_lut(active_point),active_point)=0;  %clean ant's previous way
+                            new_pheromone_trace(double(255-new_lut(active_point)),active_point)=0;  %clean ant's previous way
                         elseif suggested_direction==9
                             new_lut(active_point+1)=optimization_lut(active_point)-1;
                             new_lut(active_point)=optimization_lut(active_point)-1;
-                            new_pheromone_trace(256-new_lut(active_point),active_point)=1;  %write ant's new way
-                            new_pheromone_trace(255-new_lut(active_point),active_point)=0;  %clean ant's previous way
+                            new_pheromone_trace(double(256-new_lut(active_point)),active_point)=1;  %write ant's new way
+                            new_pheromone_trace(double(255-new_lut(active_point)),active_point)=0;  %clean ant's previous way
                             new_pheromone_trace(1:256,active_point+1)=0;   %clean ant's previous way
                             if active_point~=max_input_intensity_minus_1
-                                new_pheromone_trace(256-optimization_lut(active_point+2):256-new_lut(active_point),active_point+2)=1;  %write ant's new way
+                                new_pheromone_trace(double(256-optimization_lut(active_point+2)):double(256-new_lut(active_point)),active_point+2)=1;  %write ant's new way
                             end
-                            new_pheromone_trace(256-new_lut(active_point),active_point+1)=1;  %write ant's new way
+                            new_pheromone_trace(double(256-new_lut(active_point)),active_point+1)=1;  %write ant's new way
                         end
                         
                         %decide to select the suggested direction or not
