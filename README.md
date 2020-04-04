@@ -25,6 +25,8 @@ After this process is finished, the best transfer function is selected and is us
 </p>
 <p align="center">
   <img src="./docs/example2.jpg" alt="Example 2" height=200/>
+    <br>
+  <em>Left: original images, Right: after enhancement</em>
 </p>
 
 ## The Code
