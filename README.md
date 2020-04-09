@@ -14,7 +14,7 @@ After reaching the last point, a transfer function is created and its fitness is
   <img src="./docs/pheromone.jpg" alt="Pheromone deposits of artificial ants" height=200/>
 </p>
 
-Each artificial ant has a genetic code during the process. The population of ants evolvs via genetic algorithm. This changes the characteristics of the ants and their preferences in traversing their path in the search space. After selecting the best transfer functions, the simulated annealing tries to fine-tune them in an artificial annealing process. This is the flowchart of the general steps in the method:
+Each artificial ant has a genetic code during the process. The population of ants evolves via genetic algorithm. This changes the characteristics of the ants and their preferences in traversing their path in the search space. After selecting the best transfer functions, the simulated annealing tries to fine-tune them in an artificial annealing process. This is the flowchart of the general steps in the method:
 <p align="center">
   <img src="./docs/flowchart.jpg" alt="Flowchart" height=350/>
 </p>
