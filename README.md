@@ -61,4 +61,4 @@ To refer to this work, you may cite our papers published at [Elsevier Digital Si
 [Pourya Hoseini](https://github.com/pouryahoseini)
 
 # Contact
-I can be reached at hoseini@nevada.unr.edu.
+I can be reached at research@pouryahoseini.com.
